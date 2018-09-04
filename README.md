@@ -1,3 +1,4 @@
+
 # Drogi Uczestniku,
 
 Cieszę się, że wybrałeś właśnie mój warsztat :) 
@@ -54,6 +55,7 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
 ## Weryfikacja środowiska
 
 ### Java
+
 - Wpisz w konsoli: `java -version`. Upewnij się, że została podana informacja o wersji zainstalowanej JAVY:
   *java version "1.8.0_181*
   *Java(TM) SE Runtime Environment (build 1.8.0_181-b13)*
@@ -80,6 +82,19 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
 - Wpisz w konsoli: `docker -v`
 - Upewnij się, iż została podana informacja o wersji zainstalowanego Dockera:
   *Docker version 18.06.0-ce, build 0ffa825*
+- Pobierz dockerowe obrazy następującymi komendami:
+`docker pull jenkins`
+`docker pull selenium/hub`
+`docker pull selenium/node-firefox`
+`docker pull selenium/node-firefox-debug`
+`docker pull selenium/node-chrome`
+`docker pull selenium/node-chrome-debug`
+`docker pull elgalu/selenium`
+`docker pull dosel/zalenium`
+- Tylko dla systemów Linux - wpisz następujące komendy:
+`sudo groupadd docker`
+`sudo usermod -aG docker $USER`
+Uruchom ponownie swoją maszynę
 
 ### Docker Compose
 
@@ -88,6 +103,7 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
   *docker-compose version 1.22.0, build f46880fe*
 
 ### Maven
+
 - Wejdź do repozytorium.
 - Uruchom polecenie `mvnw clean install` jeśli używasz Windows lub `./mvnw clean install` jeśli używasz Linux.
 - Powinny uruchomić się 4 testy logowania użytkownika - dwa dla sklepu e-commerce Reserved (przeglądarka FF) oraz dwa dla sklepu 
