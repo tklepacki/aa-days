@@ -82,18 +82,18 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
 - Wpisz w konsoli: `docker -v`
 - Upewnij się, iż została podana informacja o wersji zainstalowanego Dockera:
   *Docker version 18.06.0-ce, build 0ffa825*
-- Pobierz dockerowe obrazy następującymi komendami:
-`docker pull jenkins`
-`docker pull selenium/hub`
-`docker pull selenium/node-firefox`
-`docker pull selenium/node-firefox-debug`
-`docker pull selenium/node-chrome`
-`docker pull selenium/node-chrome-debug`
-`docker pull elgalu/selenium`
-`docker pull dosel/zalenium`
-- Tylko dla systemów Linux - wpisz następujące komendy:
-`sudo groupadd docker`
-`sudo usermod -aG docker $USER`
+- Pobierz dockerowe obrazy następującymi komendami:  
+`docker pull jenkins`  
+`docker pull selenium/hub`  
+`docker pull selenium/node-firefox`  
+`docker pull selenium/node-firefox-debug`  
+`docker pull selenium/node-chrome`  
+`docker pull selenium/node-chrome-debug`  
+`docker pull elgalu/selenium`  
+`docker pull dosel/zalenium`  
+- Tylko dla systemów Linux - wpisz następujące komendy:  
+`sudo groupadd docker`  
+`sudo usermod -aG docker $USER`  
 Uruchom ponownie swoją maszynę
 
 ### Docker Compose
