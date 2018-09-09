@@ -11,7 +11,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class WebDriverCreator {
 
 	private static String CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-v2-41-linux64/chromedriver";
-	private static String CHROME_PATH = "/usr/bin/google-chrome";
 	private static String GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-v0-21-0-linux64/geckodriver";
 
 	public WebDriver createDriver(String browser) {
@@ -31,7 +30,6 @@ public class WebDriverCreator {
 				CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-v2-41-win32/chromedriver.exe";
 			}
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary(CHROME_PATH);
 			options.addArguments("--no-sandbox");
 			System.setProperty("webdriver.chrome.driver", CHROMEDRIVER_PATH);
 			WebDriver chromeDriver = new ChromeDriver(options);
