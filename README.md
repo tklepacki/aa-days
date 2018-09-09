@@ -83,7 +83,7 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
 - Upewnij się, iż została podana informacja o wersji zainstalowanego Dockera:
   *Docker version 18.06.0-ce, build 0ffa825*
 - Pobierz dockerowe obrazy następującymi komendami:  
-`docker pull jenkins`  
+`docker pull jenkins/jenkins:lts`  
 `docker pull selenium/hub`  
 `docker pull selenium/node-firefox`  
 `docker pull selenium/node-firefox-debug`  
