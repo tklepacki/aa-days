@@ -1,6 +1,6 @@
 package reserved.de;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -33,13 +33,14 @@ public class LoginTest {
 
 		commonTestSteps.loadMainPage(URL);
 		commonTestSteps.loginUser(email, password);
+		manager.getUserMenuPage().clickAccountIcon();
 
-		assertEquals(manager.getUserMenuPage().getAccountIconText(), firstName);
+		assertTrue(manager.getUserAccountPage().isUserAccountPageDisplayed());
 	}
 
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		driver.close();
 	}
 
 }

@@ -1,4 +1,4 @@
-package stores.mohito.page;
+package stores.reserved.page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,10 +9,10 @@ import utils.Wait;
 
 public class UserAccountPage {
 
-	@FindBy(xpath = "//*[@class=' customer-account-edit cms- js-enabled']")
+	@FindBy(xpath = "//form[@id='customerAccountForm']/div")
 	private WebElement userAccountPage;
 
-	private CustomFluentWait customFluentWait;
+	private final CustomFluentWait customFluentWait;
 
 	public UserAccountPage(WebDriver driver) {
 		customFluentWait = new CustomFluentWait(driver);

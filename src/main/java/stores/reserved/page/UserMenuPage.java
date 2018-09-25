@@ -13,12 +13,6 @@ public class UserMenuPage {
 	@FindBy(xpath = ".//*[@id='myAccountMenu']")
 	private WebElement accountIcon;
 
-	@FindBy(xpath = ".//*[@id='myAccountMenu']/a")
-	private WebElement accountIconText;
-
-	@FindBy(xpath = ".//*[@id='myAccountMenu']/ul/li[3]/a")
-	private WebElement logoutIcon;
-
 	private final CustomFluentWait customFluentWait;
 	private static final Duration DEFAULT_TIMEOUT = Duration.ofSeconds(10);
 
@@ -28,15 +22,6 @@ public class UserMenuPage {
 
 	public void clickAccountIcon() {
 		customFluentWait.clickElement(accountIcon, DEFAULT_TIMEOUT);
-	}
-
-	public String getAccountIconText() {
-		customFluentWait.waitForElementDisplayed(accountIcon, DEFAULT_TIMEOUT);
-		return customFluentWait.getElementText(accountIconText, DEFAULT_TIMEOUT);
-	}
-
-	public void waitForUserLogin() {
-		customFluentWait.moveToElementUntilTargetIsDisplayed(accountIcon, logoutIcon, DEFAULT_TIMEOUT);
 	}
 
 }

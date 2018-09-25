@@ -8,6 +8,7 @@ public class PageObjectManager {
 	private final WebDriver driver;
 	private LoginPage loginPage;
 	private UserMenuPage userMenuPage;
+	private UserAccountPage userAccountPage;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -27,4 +28,10 @@ public class PageObjectManager {
 		return userMenuPage;
 	}
 
+	public UserAccountPage getUserAccountPage() {
+		if (userAccountPage == null) {
+			userAccountPage = PageFactory.initElements(driver, UserAccountPage.class);
+		}
+		return userAccountPage;
+	}
 }
