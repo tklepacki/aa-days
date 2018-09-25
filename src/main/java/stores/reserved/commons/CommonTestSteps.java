@@ -21,7 +21,6 @@ public class CommonTestSteps {
 	public void loginUser(String email, String password) {
 		manager.getUserMenuPage().clickAccountIcon();
 		manager.getLoginPage().loginUser(email, password);
-		manager.getUserMenuPage().waitForUserLogin();
 	}
 
 }
