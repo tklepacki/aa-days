@@ -33,6 +33,12 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
 - Java 8
   http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
+- GIT
+  Windows: https://git-scm.com/download/win
+  **UWAGA: W trakcie instalacji w oknie "Adjusting your PATH environment" zaznaczcie opcje: "Use Git and optional Unix tools from the Windows Command Prompt (ostatni radio button)"**
+  
+  Linux: https://git-scm.com/download/linux
+
 - Docker
   https://docs.docker.com/install/linux/docker-ce/ubuntu/
   https://docs.docker.com/docker-for-windows/install/   
@@ -68,6 +74,9 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
 
 - Sklonuj repozytorium `git clone https://github.com/tklepacki/aa-days.git`
 - Wejdź do folderu z repozytorium i upewnij się, że projekt został pobrany
+- Tylko dla systemów Windows - wejdź to terminal (CMD) i wpisz komendę:
+`ls -al`  
+Upewnij się, że zostały wylistowane pliki/foldery danej lokalizacji i komenda została rozpoznana.
 
 ### IDE
 
