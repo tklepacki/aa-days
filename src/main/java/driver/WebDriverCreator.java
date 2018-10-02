@@ -16,10 +16,11 @@ public class WebDriverCreator {
 
 	public WebDriver createDriver(String browser) {
 		switch (browser) {
-
 		case "firefox":
 			if (System.getProperty("os.name").contains("Windows")) {
 				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-v0-21-0-win64/geckodriver.exe";
+			} else if (System.getProperty("os.name").contains("Mac")) {
+				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-v0-21-0-macos/geckodriver";
 			}
 			System.setProperty("webdriver.gecko.driver", GECKODRIVER_PATH);
 			WebDriver firefoxDriver = new FirefoxDriver();
@@ -29,6 +30,8 @@ public class WebDriverCreator {
 		case "chrome":
 			if (System.getProperty("os.name").contains("Windows")) {
 				CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-v2-41-win32/chromedriver.exe";
+			} else if (System.getProperty("os.name").contains("Mac")) {
+				CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-v2-41-mac64/chromedriver";
 			}
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
