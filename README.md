@@ -38,10 +38,12 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
   **UWAGA: W trakcie instalacji w oknie "Adjusting your PATH environment" zaznaczcie opcje: "Use Git and optional Unix tools from the Windows Command Prompt (ostatni radio button)"**
   
   Linux: https://git-scm.com/download/linux
+  Mac: https://git-scm.com/download/mac
 
 - Docker
   https://docs.docker.com/install/linux/docker-ce/ubuntu/
-  https://docs.docker.com/docker-for-windows/install/   
+  https://docs.docker.com/docker-for-windows/install/
+  https://docs.docker.com/docker-for-mac/install/
 
 - Docker Compose - instalacja wymagana tylko dla komputerów z systemem Linux:
   https://docs.docker.com/compose/install/
@@ -114,7 +116,7 @@ Uruchom ponownie swoją maszynę
 ### Maven
 
 - Wejdź do repozytorium.
-- Uruchom polecenie `mvnw clean install` jeśli używasz Windows lub `./mvnw clean install` jeśli używasz Linux.
+- Uruchom polecenie `mvnw clean install` jeśli używasz Windows lub `./mvnw clean install` jeśli używasz Linux/MacOS.
 - Powinny uruchomić się 4 testy logowania użytkownika - dwa dla sklepu e-commerce Reserved (przeglądarka FF) oraz dwa dla sklepu 
   e-commerce Mohito (przeglądarka Chrome).
 - Upewnij się, że testy zostały wykonane poprawnie i zakończyły się komunikatem *BUILD SUCCESS*.
