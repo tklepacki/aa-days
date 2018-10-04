@@ -18,6 +18,8 @@ services:
       - HUB_PORT=4444
       - NODE_MAX_INSTANCES=4
       - NODE_MAX_SESSION=4
+    ports: 
+      - 32768:5900
            
   firefox-node:
     image: selenium/node-firefox
@@ -31,3 +33,5 @@ services:
       - HUB_PORT=4444
       - NODE_MAX_INSTANCES=4
       - NODE_MAX_SESSION=4
+    ports: 
+      - 32769:5900
