@@ -7,7 +7,7 @@ services:
       - "4444:4444"
       
   chrome-node:
-    image: selenium/node-chrome
+    image: selenium/node-chrome-debug
     container_name: chrome-node
     depends_on:
       - selenium-hub
@@ -20,9 +20,9 @@ services:
       - NODE_MAX_SESSION=4
     ports: 
       - 32768:5900
-           
+                    
   firefox-node:
-    image: selenium/node-firefox
+    image: selenium/node-firefox-debug
     container_name: firefox-node
     depends_on:
       - selenium-hub
