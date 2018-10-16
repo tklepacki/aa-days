@@ -2,12 +2,15 @@ package mohito.pl;
 
 import static org.testng.Assert.assertTrue;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import driver.WebDriverCreator;
+import driver.RemoteDriverCreator;
 import mohito.pl.testdata.UserDataProvider;
 import stores.mohito.commons.CommonTestSteps;
 import stores.mohito.page.PageObjectManager;
@@ -19,9 +22,10 @@ public class LoginTest {
 	private PageObjectManager manager;
 	private static final String URL = "http://mohito.com/pl/pl";
 
+	@Parameters("browser")
 	@BeforeMethod
-	public void setUp() {
-		driver = new WebDriverCreator().createDriver("chrome");
+	public void setUp(String browser) throws MalformedURLException {
+		driver = new RemoteDriverCreator().createDriver("chrome");
 		commonTestSteps = new CommonTestSteps(driver);
 		manager = new PageObjectManager(driver);
 	}
@@ -30,7 +34,7 @@ public class LoginTest {
 	public void loginTest(String email, String password) {
 
 		commonTestSteps.loadMainPage(URL);
-		WebDriverCreator.setNewsletterCookie(driver);
+		RemoteDriverCreator.setNewsletterCookie(driver);
 		commonTestSteps.loginProcess(email, password);
 		manager.getUserMenuPage().clickAccountIcon();
 
