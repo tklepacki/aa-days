@@ -7,7 +7,7 @@ W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztat�
 
 ## Linki przydatne w trakcie warsztatów:
 
-- Zadania i rozwiązania do zadań: 
+- Zadania, rozwiązania do zadań oraz PDF z prezentacji: 
 https://drive.google.com/open?id=10IekMR2J81T1CjGVrqNRXB4MmyNeUUjp
 
 - Notatki:
