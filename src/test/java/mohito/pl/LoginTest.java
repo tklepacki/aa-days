@@ -32,6 +32,8 @@ public class LoginTest {
 		commonTestSteps.loadMainPage(URL);
 		WebDriverCreator.setNewsletterCookie(driver);
 		commonTestSteps.loginProcess(email, password);
+
+		//manager.getUserMenuPage().clickAcceptRules();
 		manager.getUserMenuPage().clickAccountIcon();
 
 		assertTrue(manager.getUserAccountPage().isUserAccountPageDisplayed());
