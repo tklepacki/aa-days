@@ -100,7 +100,7 @@ Upewnij się, że zostały wylistowane pliki/foldery danej lokalizacji i komenda
 
 - Wpisz w konsoli: `docker -v`
 - Upewnij się, iż została podana informacja o wersji zainstalowanego Dockera:
-  *Docker version 18.06.0-ce, build 0ffa825*
+  *Docker version 18.09.3, build 774a1f4*
 - Pobierz dockerowe obrazy następującymi komendami:  
 `docker pull jenkins/jenkins:lts`  
 `docker pull selenium/hub`  
@@ -119,7 +119,7 @@ Uruchom ponownie swoją maszynę
 
 - Wpisz w konsoli: `docker-compose -v`
 - Upewnij się, iż została podana informacja o wersji zainstalowanego Dockera Compose:
-  *docker-compose version 1.22.0, build f46880fe*
+  *docker-compose version 1.23.2, build 1110ad01*
 
 ### Maven
 
