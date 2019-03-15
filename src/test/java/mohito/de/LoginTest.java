@@ -20,10 +20,9 @@ public class LoginTest {
 	private PageObjectManager manager;
 	private static final String URL = "http://mohito.com/de/de";
 
-	@Parameters("browser")
 	@BeforeMethod
-	public void setUp(String browser) {
-		driver = new WebDriverCreator().createDriver(browser);
+	public void setUp() {
+		driver = new WebDriverCreator().createDriver("firefox");
 		commonTestSteps = new CommonTestSteps(driver);
 		manager = new PageObjectManager(driver);
 	}
