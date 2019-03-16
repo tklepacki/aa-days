@@ -42,7 +42,7 @@
 					<properties>
 						<property>
 							<name>suitethreadpoolsize</name>
-							<value>2</value>
+							<value>1</value>
 						</property>
 					</properties>
 				</configuration>
