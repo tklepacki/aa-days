@@ -2,6 +2,7 @@ package mohito.de;
 
 import static org.testng.Assert.assertTrue;
 
+import driver.RemoteDriverCreator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +14,8 @@ import mohito.de.testdata.UserDataProvider;
 import stores.mohito.commons.CommonTestSteps;
 import stores.mohito.page.PageObjectManager;
 
+import java.net.MalformedURLException;
+
 public class LoginTest {
 
 	private WebDriver driver;
@@ -22,13 +25,13 @@ public class LoginTest {
 /*
 @Parameters("browser")
 	@BeforeMethod
-	public void setUp(String browser) {
-		driver = new WebDriverCreator().createDriver(browser);
+	public void setUp(String browser) throws MalformedURLException {
+			driver = new RemoteDriverCreator().createDriver(browser);
  */
 @Parameters("browser")
 @BeforeMethod
-	public void setUp(String browser) {
-		driver = new WebDriverCreator().createDriver(browser);
+public void setUp(String browser) throws MalformedURLException {
+	driver = new RemoteDriverCreator().createDriver(browser);
 		commonTestSteps = new CommonTestSteps(driver);
 		manager = new PageObjectManager(driver);
 	}

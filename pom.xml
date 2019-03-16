@@ -26,7 +26,6 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<suiteXmlFiles>
-						<file>src/test/resources/testsuite.xml</file>
 						<file>src/test/resources/testsuitechrome.xml</file>
 						<file>src/test/resources/testsuitefirefox.xml</file>
 					</suiteXmlFiles>
