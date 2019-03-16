@@ -18,12 +18,12 @@ public class RemoteWebDriverCreator {
         switch(browser) {
             case "chrome":
                 capabilities = DesiredCapabilities.chrome();
-                driver = new RemoteWebDriver(new URL("http://localhost:32768"), capabilities);
+                driver = new RemoteWebDriver(new URL("http://localhost:32771"), capabilities);
                 setDefaultSettings(driver);
                 return driver;
             case "firefox":
                 capabilities = DesiredCapabilities.firefox();
-                driver = new RemoteWebDriver(new URL("http://localhost:32679"), capabilities);
+                driver = new RemoteWebDriver(new URL("http://localhost:32770"), capabilities);
                 setDefaultSettings(driver);
                 return driver;
             default:
