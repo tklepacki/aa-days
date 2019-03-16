@@ -22,8 +22,7 @@ public class LoginTest {
 
 	@BeforeMethod
 	@Parameters("browser")
-	public void setUp(String browser)
- {
+	public void setUp(String browser) {
 		driver = new WebDriverCreator().createDriver(browser);
 		commonTestSteps = new CommonTestSteps(driver);
 		manager = new PageObjectManager(driver);
