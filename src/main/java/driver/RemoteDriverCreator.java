@@ -16,13 +16,13 @@ public class RemoteDriverCreator {
         switch (browser) {
             case "firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
-                RemoteWebDriver firefoxDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),
+                RemoteWebDriver firefoxDriver = new RemoteWebDriver(new URL("192.168.99.100:4444/wd/hub"),
                         firefoxOptions);
                 setDefaultSettings(firefoxDriver);
                 return firefoxDriver;
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
-                RemoteWebDriver chromeDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
+                RemoteWebDriver chromeDriver = new RemoteWebDriver(new URL("192.168.99.100:4444/wd/hub"), chromeOptions);
                 setDefaultSettings(chromeDriver);
                 return chromeDriver;
             default:
