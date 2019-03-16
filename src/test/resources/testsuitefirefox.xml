@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All" parallel="classes" thread-count="4">
 	<test name="loginFirefoxTests">
-		<parameter name ="browser" value="firefox">
+		<parameter name="browser" value="firefox" />
 		<packages>
 			<package name=".*" />
-			</packages>
+		</packages>
 	</test>
 </suite>
