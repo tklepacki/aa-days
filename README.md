@@ -7,6 +7,9 @@ W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztat�
 
 ## Linki przydatne w trakcie warsztatów:
 
+- Zadania i rozwiązana:
+https://drive.google.com/open?id=10IekMR2J81T1CjGVrqNRXB4MmyNeUUjp
+
 - Notatki:
 https://docs.google.com/document/d/1RqUe1DkDPB2K4awu-X7C8339D3F7fzcSs3kid5S84Uc/edit?usp=sharing
 
