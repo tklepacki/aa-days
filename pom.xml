@@ -31,7 +31,7 @@
 					</suiteXmlFiles>
 					<properties>
 						<property>
-							<name>suitethreatpoolsize</name>
+							<name>suitethreadpoolsize</name>
 							<value>2</value>
 						</property>
 					</properties>
