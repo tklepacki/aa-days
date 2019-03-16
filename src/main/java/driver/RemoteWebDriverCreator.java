@@ -2,6 +2,8 @@ package driver;
 
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -11,19 +13,19 @@ import java.util.concurrent.TimeUnit;
 
 public class RemoteWebDriverCreator {
 
-    private DesiredCapabilities capabilities;
+    private static final String GRID_URL = "http://localhost:4444/wd/hub";
 
     public RemoteWebDriver createDriver(String browser) throws MalformedURLException {
         RemoteWebDriver driver;
         switch(browser) {
             case "chrome":
-                capabilities = DesiredCapabilities.chrome();
-                driver = new RemoteWebDriver(new URL("http://localhost:32771"), capabilities);
+                ChromeOptions chromeOptions = new ChromeOptions();
+                driver = new RemoteWebDriver(new URL(GRID_URL), chromeOptions);
                 setDefaultSettings(driver);
                 return driver;
             case "firefox":
-                capabilities = DesiredCapabilities.firefox();
-                driver = new RemoteWebDriver(new URL("http://localhost:32770"), capabilities);
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                driver = new RemoteWebDriver(new URL(GRID_URL), firefoxOptions);
                 setDefaultSettings(driver);
                 return driver;
             default:
