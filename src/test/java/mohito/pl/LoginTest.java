@@ -24,7 +24,7 @@ public class LoginTest {
 	@Parameters("browser")
 	public void setUp(String browser)
  {
-		driver = new WebDriverCreator().createDriver("chrome");
+		driver = new WebDriverCreator().createDriver("browser");
 		commonTestSteps = new CommonTestSteps(driver);
 		manager = new PageObjectManager(driver);
 	}
