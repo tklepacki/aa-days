@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All">
+<suite name="All" parallel="classes" thread-count="4">
 	<test name="loginTests">
-		<packages>
-			<package name="reserved.*" />
-			<package name="mohito.*" />
-		</packages>
+		<classes>
+			<class name="mohito.de.LoginTest"/>
+			<class name="mohito.pl.LoginTest"/>
+			<class name="reserved.de.LoginTest"/>
+			<class name="reserved.pl.LoginTest"/>
+		</classes>
 	</test>
 </suite>
