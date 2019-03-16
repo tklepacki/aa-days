@@ -27,11 +27,7 @@
 				<configuration>
 					<properties>
 						<property>
-							<name>parallel</name>
-							<value>suites</value>
-						</property>
-						<property>
-							<name>threadCount</name>
+							<name>suitethreadpoolsize</name>
 							<value>2</value>
 						</property>
 					</properties>
