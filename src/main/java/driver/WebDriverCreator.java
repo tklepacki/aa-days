@@ -11,16 +11,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverCreator {
 
-	private static String CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-v2-41-linux64/chromedriver";
-	private static String GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-v0-21-0-linux64/geckodriver";
+	private static String CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-linux64/chromedriver";
+	private static String GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-linux64/geckodriver";
 
 	public WebDriver createDriver(String browser) {
 		switch (browser) {
 		case "firefox":
 			if (System.getProperty("os.name").contains("Windows")) {
-				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-v0-21-0-win64/geckodriver.exe";
+				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-win64/geckodriver.exe";
 			} else if (System.getProperty("os.name").contains("Mac")) {
-				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-v0-21-0-macos/geckodriver";
+				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-macos/geckodriver";
 			}
 			System.setProperty("webdriver.gecko.driver", GECKODRIVER_PATH);
 			WebDriver firefoxDriver = new FirefoxDriver();
@@ -29,9 +29,9 @@ public class WebDriverCreator {
 
 		case "chrome":
 			if (System.getProperty("os.name").contains("Windows")) {
-				CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-v2-41-win32/chromedriver.exe";
+				CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-win32/chromedriver.exe";
 			} else if (System.getProperty("os.name").contains("Mac")) {
-				CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-v2-41-mac64/chromedriver";
+				CHROMEDRIVER_PATH = "src/main/resources/seleniumdrivers/chromedrivers/chromedriver-mac64/chromedriver";
 			}
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
