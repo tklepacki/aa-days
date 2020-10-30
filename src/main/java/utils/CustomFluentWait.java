@@ -65,7 +65,7 @@ public class CustomFluentWait {
 		String url = driver.getCurrentUrl();
 		String accountIconXpath = "Wrong url!";
 		if (url.contains("reserved")) {
-			accountIconXpath = ".//*[@id='myAccountMenu']";
+			accountIconXpath = "//*[@data-selen='account-logged-out-button' or @data-selen='action-account-login-mobile' or @data-selen='account-logged-in-button']";
 		} else if (url.contains("mohito")) {
 			accountIconXpath = "(.//*[@id='aside-menu-right-login' or @id='aside-menu-right-customer'])[2]";
 		}

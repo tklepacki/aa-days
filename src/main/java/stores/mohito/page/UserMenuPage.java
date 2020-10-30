@@ -8,7 +8,8 @@ import utils.CustomFluentWait;
 
 public class UserMenuPage {
 
-	@FindBy(xpath = "(//div[@id='aside-menu-right-login']/a/p)[2] | (//div[@id='aside-menu-right-customer']/a/p)[2]")
+	@FindBy(xpath = "(//div[@id='aside-menu-right-login']/a/i)[2] | (//div[@id='aside-menu-right-customer']/a/i)[2]")
+
 	private WebElement accountIcon;
 
 	private CustomFluentWait customFluentWait;

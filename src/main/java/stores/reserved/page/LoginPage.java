@@ -10,13 +10,13 @@ import utils.CustomFluentWait;
 
 public class LoginPage {
 
-	@FindBy(id = "loginEmail")
+	@FindBy(id = "login[username]_id")
 	private WebElement emailTextField;
 
-	@FindBy(id = "loginPassword")
+	@FindBy(id = "login[password]_id")
 	private WebElement passwordTextField;
 
-	@FindBy(xpath = ".//*[@id='loginButton']")
+	@FindBy(xpath = "//div[@id='loginRegisterRoot']/div/div/div/form/button")
 	private WebElement loginSubmitButton;
 
 	private final CustomFluentWait customFluentWait;

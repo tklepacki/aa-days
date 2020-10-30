@@ -10,7 +10,7 @@ import utils.CustomFluentWait;
 
 public class UserMenuPage {
 
-	@FindBy(xpath = ".//*[@id='myAccountMenu']")
+	@FindBy(xpath = "//*[@data-selen='account-logged-out-button' or @data-selen='account-logged-in-button']")
 	private WebElement accountIcon;
 
 	private final CustomFluentWait customFluentWait;

@@ -5,13 +5,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 
-	@FindBy(id = "email")
+	@FindBy(id = "login[username]_id")
 	private WebElement emailTextField;
 
-	@FindBy(id = "name")
+	@FindBy(id = "login[password]_id")
 	private WebElement passwordTextField;
 
-	@FindBy(xpath = ".//*[@id='authorization']/div/input")
+	@FindBy(xpath = "//div[@id='loginRegisterRoot']/div/div/div/form/button")
 	private WebElement loginSubmitBtn;
 
 	public void sendLogin(String email) {
