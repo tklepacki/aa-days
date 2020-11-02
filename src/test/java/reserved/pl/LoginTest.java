@@ -29,7 +29,7 @@ public class LoginTest {
 	}
 
 	@Test(dataProvider = "loginTest", dataProviderClass = UserDataProvider.class)
-	public void loginTest(String email, String password, String firstName) {
+	public void loginTest(String email, String password) {
 
 		commonTestSteps.loadMainPage(URL);
 		WebDriverCreator.setNewsletterCookie(driver);
@@ -43,5 +43,4 @@ public class LoginTest {
 	public void tearDown() {
 		driver.quit();
 	}
-
 }
