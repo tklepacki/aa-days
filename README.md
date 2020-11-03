@@ -3,12 +3,9 @@
 
 Cieszę się, że wybrałeś właśnie mój warsztat :) 
 
-W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztatów poproszę Cię o wykonanie kilku czynności. Najpierw upewnij się, że spełniasz określone wymagania dotyczące wiedzy oraz narzędzi (*Wymagania*), a następnie przejdź do kroków w paragrafie *Weryfikacja*.
+W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztatów poproszę Cię o upewnienie się, że spełniasz wymagania dotyczące narzędzi (*Wymagania*).
 
 ## Linki przydatne w trakcie warsztatów:
-
-- Prezentacja, zadania i rozwiązana do zadań:
-https://drive.google.com/open?id=10IekMR2J81T1CjGVrqNRXB4MmyNeUUjp
 
 - Notatki:
 https://docs.google.com/document/d/1RqUe1DkDPB2K4awu-X7C8339D3F7fzcSs3kid5S84Uc/edit?usp=sharing
@@ -38,8 +35,8 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
   W przypadku Eclipse'a prośba dodatkowo o instalację TestNG for Eclipse: 
   https://marketplace.eclipse.org/content/testng-eclipse
 
-- Java 8
-  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+- Java JDK - minimum wersja 8
+  http://www.oracle.com/technetwork/java/javase/downloads/
 
 - GIT
   Windows: https://git-scm.com/download/win
@@ -72,13 +69,9 @@ Proszę o przyniesienie ze sobą komputera z systemem Linux albo w ostatecznośc
 
 ### Java
 
-- Wpisz w konsoli: `java -version`. Upewnij się, że została podana informacja o wersji zainstalowanej JAVY:
-  *java version "1.8.0_181*
-  *Java(TM) SE Runtime Environment (build 1.8.0_181-b13)*
-  *Java HotSpot(TM) 64-Bit Server VM (build 25.181-b13, mixed mode)* 
+- Wpisz w konsoli: `java -version`. Upewnij się, że została podana informacja o wersji zainstalowanej JAVY
 
-- Wpisz w konsoli: `javac -version`. Upewnij się, że została podana informacja o wersji zainstalowanego kompilatora JAVA:
-  *javac 1.8.0_181*
+- Wpisz w konsoli: `javac -version`. Upewnij się, że została podana informacja o wersji zainstalowanego kompilatora JAVA
 
 ### Git:
 
@@ -90,11 +83,7 @@ Upewnij się, że zostały wylistowane pliki/foldery danej lokalizacji i komenda
 
 ### IDE
 
-- Zaimportuj projekt Maven w swoim IDE. Następnie uruchom zestaw testowy znajdujący się w lokalizacji
-  *src/test/resources/testsuite.xml*
-- Powinny uruchomić się 4 testy logowania użytkownika - dwa dla sklepu e-commerce Reserved (przeglądarka FF) oraz dwa dla sklepu 
-  e-commerce Mohito (przeglądarka Chrome).
-- Upewnij się, że testy zostały zakończone sukcesem.
+- Zaimportuj projekt Maven w swoim IDE.
 
 ### Docker
 
@@ -118,16 +107,12 @@ Uruchom ponownie swoją maszynę
 ### Docker Compose
 
 - Wpisz w konsoli: `docker-compose -v`
-- Upewnij się, iż została podana informacja o wersji zainstalowanego Dockera Compose:
-  *docker-compose version 1.23.2, build 1110ad01*
+- Upewnij się, iż została podana informacja o wersji zainstalowanego Dockera Compose
 
 ### Maven
 
 - Wejdź do repozytorium.
-- Uruchom polecenie `mvnw clean install` jeśli używasz Windows lub `./mvnw clean install` jeśli używasz Linux/MacOS.
-- Powinny uruchomić się 4 testy logowania użytkownika - dwa dla sklepu e-commerce Reserved (przeglądarka FF) oraz dwa dla sklepu 
-  e-commerce Mohito (przeglądarka Chrome).
-- Upewnij się, że testy zostały wykonane poprawnie i zakończyły się komunikatem *BUILD SUCCESS*.
+- Uruchom polecenie `mvnw -v`. Upewnij się, że została podana informacja o wersji zainstalowanego Mavena
 
 ## W razie problemów
 Pisz na mój adres email: *t.klepacki@wp.pl*
