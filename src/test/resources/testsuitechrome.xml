@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All" parallel="classes" thread-count="1">
     <test name="loginChromeTests">
-        <parameter name="browser" value="chrome" />
+        <parameter name="browser" value="google-chrome" />
         <packages>
             <package name=".*" />
         </packages>
