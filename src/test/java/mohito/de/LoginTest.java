@@ -2,7 +2,7 @@ package mohito.de;
 
 import static org.testng.Assert.assertTrue;
 
-import com.beust.jcommander.Parameters;
+import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
