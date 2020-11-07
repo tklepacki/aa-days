@@ -28,7 +28,7 @@ public class WebDriverCreator {
 			System.setProperty("webdriver.gecko.driver", GECKODRIVER_PATH);
 			FirefoxBinary firefoxBinary = new FirefoxBinary();
 			firefoxBinary.addCommandLineOptions("--no-sandbox");
-			//firefoxBinary.addCommandLineOptions("--headless");
+			firefoxBinary.addCommandLineOptions("--headless");
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			firefoxOptions.setBinary(firefoxBinary);
 			FirefoxDriver firefoxDriver = new FirefoxDriver(firefoxOptions);
@@ -43,7 +43,7 @@ public class WebDriverCreator {
 			}
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
-			//options.addArguments("--headless");
+			options.addArguments("--headless");
 			System.setProperty("webdriver.chrome.driver", CHROMEDRIVER_PATH);
 			WebDriver chromeDriver = new ChromeDriver(options);
 			setDefaultSettings(chromeDriver);
