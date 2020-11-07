@@ -27,6 +27,7 @@ public class WebDriverCreator {
 			}
 			System.setProperty("webdriver.gecko.driver", GECKODRIVER_PATH);
 			FirefoxBinary firefoxBinary = new FirefoxBinary();
+			firefoxBinary.addCommandLineOptions("--no-sandbox");
 			firefoxBinary.addCommandLineOptions("--headless");
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			firefoxOptions.setBinary(firefoxBinary);
