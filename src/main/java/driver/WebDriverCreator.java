@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class WebDriverCreator {
 
@@ -22,8 +24,12 @@ public class WebDriverCreator {
 			} else if (System.getProperty("os.name").contains("Mac")) {
 				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-macos/geckodriver";
 			}
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+			firefoxOptions.setProfile(new FirefoxProfile());
+			firefoxOptions.addPreference("dom.webnotifications.enabled",false);
+			firefoxOptions.addPreference("dom.disable_open_during_load",false);
 			System.setProperty("webdriver.gecko.driver", GECKODRIVER_PATH);
-			WebDriver firefoxDriver = new FirefoxDriver();
+			WebDriver firefoxDriver = new FirefoxDriver(firefoxOptions);
 			setDefaultSettings(firefoxDriver);
 			return firefoxDriver;
 

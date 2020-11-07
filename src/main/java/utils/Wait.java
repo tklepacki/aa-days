@@ -10,4 +10,11 @@ public class Wait {
 		}
 	}
 
+	public static void waitForThreeSecond() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }
