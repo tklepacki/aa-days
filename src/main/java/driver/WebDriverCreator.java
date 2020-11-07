@@ -7,7 +7,10 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
 
 public class WebDriverCreator {
 
@@ -23,7 +26,11 @@ public class WebDriverCreator {
 				GECKODRIVER_PATH = "src/main/resources/seleniumdrivers/firefoxdrivers/geckodriver-macos/geckodriver";
 			}
 			System.setProperty("webdriver.gecko.driver", GECKODRIVER_PATH);
-			WebDriver firefoxDriver = new FirefoxDriver();
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
+			firefoxBinary.addCommandLineOptions("--headless");
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+			firefoxOptions.setBinary(firefoxBinary);
+			FirefoxDriver firefoxDriver = new FirefoxDriver(firefoxOptions);
 			setDefaultSettings(firefoxDriver);
 			return firefoxDriver;
 
@@ -35,6 +42,7 @@ public class WebDriverCreator {
 			}
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
+			options.addArguments("--headless");
 			System.setProperty("webdriver.chrome.driver", CHROMEDRIVER_PATH);
 			WebDriver chromeDriver = new ChromeDriver(options);
 			setDefaultSettings(chromeDriver);
