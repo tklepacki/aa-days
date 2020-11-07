@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.annotations.Parameters;
 
 import driver.WebDriverCreator;
 import mohito.pl.testdata.UserDataProvider;
@@ -19,9 +20,10 @@ public class LoginTest {
 	private PageObjectManager manager;
 	private static final String URL = "http://mohito.com/pl/pl";
 
+	@Parameters("browser")
 	@BeforeMethod
-	public void setUp() {
-		driver = new WebDriverCreator().createDriver("chrome");
+	public void setUp(String browser) {
+		driver = new WebDriverCreator().createDriver(browser);
 		commonTestSteps = new CommonTestSteps(driver);
 		manager = new PageObjectManager(driver);
 	}
