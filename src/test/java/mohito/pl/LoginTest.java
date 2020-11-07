@@ -2,6 +2,7 @@ package mohito.pl;
 
 import static org.testng.Assert.assertTrue;
 
+import com.beust.jcommander.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,9 +20,10 @@ public class LoginTest {
 	private PageObjectManager manager;
 	private static final String URL = "http://mohito.com/pl/pl";
 
+	@Parameters("browser")
 	@BeforeMethod
-	public void setUp() {
-		driver = new WebDriverCreator().createDriver("chrome");
+	public void setUp(String browser) {
+		driver = new WebDriverCreator().createDriver(browser);
 		commonTestSteps = new CommonTestSteps(driver);
 		manager = new PageObjectManager(driver);
 	}
