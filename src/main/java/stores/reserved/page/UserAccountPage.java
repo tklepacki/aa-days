@@ -19,7 +19,7 @@ public class UserAccountPage {
 	}
 
 	public boolean isUserAccountPageDisplayed() {
-		Wait.waitForOneSecond();
+		Wait.waitForThreeSecond();
 		return customFluentWait.isElementPresent(userAccountPage);
 	}
 
