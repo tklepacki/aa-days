@@ -5,14 +5,6 @@ Cieszę się, że wybrałeś właśnie mój warsztat :)
 
 W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztatów poproszę Cię o upewnienie się, że spełniasz wymagania dotyczące narzędzi (*Wymagania*).
 
-## Linki przydatne w trakcie warsztatów:
-
-- Prezentacja, zadania i rozwiązana do zadań:
-https://drive.google.com/open?id=10IekMR2J81T1CjGVrqNRXB4MmyNeUUjp
-
-- Notatki:
-https://docs.google.com/document/d/1RqUe1DkDPB2K4awu-X7C8339D3F7fzcSs3kid5S84Uc/edit?usp=sharing
-
 ## Wymagania
 
 ### Wiedza
